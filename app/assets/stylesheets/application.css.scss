@@ -1,7 +1,9 @@
+@import "simplex-variables.scss";
 @import "bootstrap-variables.scss";
 @import "bootstrap-custom-variables.scss";
 @import "bootstrap-sprockets.scss";
 @import "bootstrap.scss";
+@import "simplex.scss";
 
 body {
   padding-top: $navbar-height + 10px;
