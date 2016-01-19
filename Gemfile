@@ -36,6 +36,8 @@ gem 'bootstrap-generators', '~> 3.3.4'
 
 gem 'devise'
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
   # Use pry with Rails console
   gem 'pry-rails'
