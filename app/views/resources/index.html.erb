@@ -12,7 +12,7 @@
       <tr>
             <th>Title</th>
             <th>Language</th>
-            <th>Type</th>
+            <th>Category</th>
             <th>Link</th>
             <th>Completed</th>
             <th></th>
@@ -25,7 +25,7 @@
       <%= content_tag_for(:tr, @resources) do |resource| %>
             <td><%= resource.title %></td>
             <td><%= resource.language %></td>
-            <td><%= resource.type %></td>
+            <td><%= resource.category %></td>
             <td><%= resource.link %></td>
             <td><%= resource.completed %></td>
             <td><%= link_to 'Show', resource %></td>
