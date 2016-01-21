@@ -1,6 +1,6 @@
 class LanguagesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  #before_filter :authenticate_user!
 
   def index
     @languages = Language.all
@@ -10,7 +10,7 @@ class LanguagesController < ApplicationController
   end
 
   def new
-    @resource = Resource.new
+    @language = Language.new
   end
 
   def edit

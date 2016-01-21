@@ -3,7 +3,7 @@
     <span class="glyphicon glyphicon-plus"></span>
     New Resource
   <% end %>
-  <h1>Listing resources</h1>
+  <h1>Your Dashboard</h1>
 </div>
 
 <div class="table-responsive">
@@ -27,10 +27,12 @@
             <td><%= resource.language %></td>
             <td><%= resource.category %></td>
             <td><%= resource.link %></td>
-            <td><%= resource.completed %></td>
+            <td><%= resource.completed %>
+                <%= check_box_tag("name", "value", false, class: "checkbox") %>
+            </td>
             <td><%= link_to 'Show', resource %></td>
         <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-        <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>
   </table>
