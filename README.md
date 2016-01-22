@@ -1,5 +1,6 @@
 # brute_force
 Project 2: a simple dashboard to collect resources and track learning of programming languages
+
 General Assembly WDI January 22, 2016
 
 ## Links
