@@ -20,6 +20,7 @@
     <tbody>
       <%= content_tag_for(:tr, @languages) do |language| %>
             <td><h5><%= language.name %></h5></td>
+            <td><%= check_box_tag("name", "value", false, class: "checkbox") %></td>
       <% end %>
     </tbody>
   </table>

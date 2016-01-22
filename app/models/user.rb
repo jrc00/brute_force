@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  # has_many :languages
+  has_many :languages
   has_many :resources
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

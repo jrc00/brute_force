@@ -4,6 +4,7 @@ class LanguagesController < ApplicationController
 
   def index
     @languages = Language.all
+    # @languages.sort! { |l| l.name.downcase }
   end
 
   def show
@@ -14,31 +15,29 @@ class LanguagesController < ApplicationController
   end
 
   def edit
+    @language = Language.find(params[:id])
+  end
+
+  def set_resource
+
   end
 
   def create
     @language = Language.new(language_params)
-
-    respond_to do |format|
-      if @language.save
-        format.html { redirect_to @language, notice: 'Language was successfully created.' }
-        format.json { render :show, status: :created, location: @language }
-      else
-        format.html { render :new }
-        format.json { render json: @language.errors, status: :unprocessable_entity }
-      end
+    if Language.find_by(name: @language.name) == nil
+      @language.save
+      redirect_to @language, notice: 'Language was successfully created.'
+    else
+      redirect_to @language, notice: 'Language already exists.'
     end
+
+
   end
 
   def update
-    respond_to do |format|
-      if @language.update(language_params)
-        format.html { redirect_to @language, notice: 'Language was successfully updated.' }
-        format.json { render :show, status: :ok, location: @language }
-      else
-        format.html { render :edit }
-        format.json { render json: @language.errors, status: :unprocessable_entity }
-      end
+    @language = Language.find(params[:id])
+    if @language.update_attributes(language_params)
+    redirect_to languages_index_path, notice: 'Language was successfully updated.'
     end
   end
 

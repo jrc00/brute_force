@@ -21,6 +21,7 @@ class ResourcesController < ApplicationController
   def edit
   end
 
+
   # POST /resources
   # POST /resources.json
   def create

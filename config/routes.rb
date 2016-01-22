@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'languages/index'
-  resources :resources
   root to: 'languages#index'
+  resources :languages
+  resources :resources
   match '/about', to: 'static_pages#about', via: 'get'
 
   devise_for :users, controllers: { sessions: "user/sessions" }

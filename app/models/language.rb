@@ -1,5 +1,6 @@
 class Language < ActiveRecord::Base
-  # has many :users
-  # has many :resources
+  belongs_to :user
+  has_many :resources
+
   validates_presence_of :name
 end
