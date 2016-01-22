@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+["Ruby", "Rails", "JavaScript", "Java", "Python", "CSS", "HTML", "Node.js", "Angular.js", "Java"].each do |language|
+  Language.find_or_create_by_name language
+end
