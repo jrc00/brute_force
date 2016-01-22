@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   root to: 'languages#index'
   resources :languages
+
+  post 'languages/add_selected' => 'languages#add_selected'
+
   resources :resources
+
   match '/about', to: 'static_pages#about', via: 'get'
 
   devise_for :users, controllers: { sessions: "user/sessions" }

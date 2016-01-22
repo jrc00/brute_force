@@ -30,8 +30,6 @@ class LanguagesController < ApplicationController
     else
       redirect_to @language, notice: 'Language already exists.'
     end
-
-
   end
 
   def update
@@ -47,6 +45,13 @@ class LanguagesController < ApplicationController
       format.html { redirect_to languages_url, notice: 'Language was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def add_selected
+    language_ids = params[:language_ids]
+    current_user.languages.push(Language.where(id: language_ids))
+    current_user.save!
+    redirect_to :resources, notice: 'Your languages have been saved.'
   end
 
   private
