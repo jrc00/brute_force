@@ -26,18 +26,26 @@ class ResourcesController < ApplicationController
 
   # POST /resources
   # POST /resources.json
+  # def create
+  #   @resource = Resource.new(resource_params)
   def create
     @resource = Resource.new(resource_params)
-
-    respond_to do |format|
-      if @resource.save
-        format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
-        format.json { render :show, status: :created, location: @resource }
-      else
-        format.html { render :new }
-        format.json { render json: @resource.errors, status: :unprocessable_entity }
-      end
+    if Resource.find_by(title: @resource.title) == nil
+      @resource.save
+      redirect_to resources_path, notice: 'Resource was successfully created.'
+    else
+      redirect_to resources_path, notice: 'Resource already exists.'
     end
+
+    # respond_to do |format|
+    #   if @resource.save
+    #     format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
+    #     format.json { render :show, status: :created, location: @resource }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @resource.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /resources/1
