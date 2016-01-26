@@ -28,7 +28,7 @@
             <td><%= resource.language %></td>
             <td><%= resource.category %></td>
             <td><%= link_to(resource.link) %></td>
-            <td><%= resource.completed %></td>
+            <td><%= check_box_tag 'completed' %></td>
             <td><%= link_to 'Show', resource %></td>
         <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
         <td><%= link_to 'Delete', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>

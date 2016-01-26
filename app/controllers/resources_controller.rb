@@ -1,14 +1,13 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+
   # GET /resources
-  # GET /resources.json
   def index
     @resources = Resource.all
   end
 
   # GET /resources/1
-  # GET /resources/1.json
   def show
     @resource = current_user.resources.find(params[:id])
   end
@@ -25,9 +24,6 @@ class ResourcesController < ApplicationController
 
 
   # POST /resources
-  # POST /resources.json
-  # def create
-  #   @resource = Resource.new(resource_params)
   def create
     @resource = Resource.new(resource_params)
     if Resource.find_by(title: @resource.title) == nil
@@ -36,16 +32,6 @@ class ResourcesController < ApplicationController
     else
       redirect_to resources_path, notice: 'Resource already exists.'
     end
-
-    # respond_to do |format|
-    #   if @resource.save
-    #     format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
-    #     format.json { render :show, status: :created, location: @resource }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @resource.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
   # PATCH/PUT /resources/1
