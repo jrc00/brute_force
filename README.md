@@ -2,10 +2,6 @@
 A simple dashboard to collect resources and track learning of
 programming languages
 
-## Links
-* [Github](https://github.com/jrc00/brute_force)
-* [Heroku](https://protected-shelf-6507.herokuapp.com/)
-
 ## Project Notes
 * Wireframes [1](https://drive.google.com/file/d/0B7VisA2q3bJlY0drYlY0aWEtcm8/view?usp=sharing),
 [2](https://drive.google.com/file/d/0B7VisA2q3bJlT2FtdDlRN2tnSHM/view?usp=sharing),
