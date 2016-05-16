@@ -2,7 +2,7 @@
 A simple dashboard to collect resources and track learning of
 programming languages
 
-## Project Notes
+## Notes
 * Wireframes [1](https://drive.google.com/file/d/0B7VisA2q3bJlY0drYlY0aWEtcm8/view?usp=sharing),
 [2](https://drive.google.com/file/d/0B7VisA2q3bJlT2FtdDlRN2tnSHM/view?usp=sharing),
 [3](https://drive.google.com/file/d/0B7VisA2q3bJlQUw3dG9YeGl5S2s/view?usp=sharing)
@@ -10,10 +10,10 @@ programming languages
 * [Trello](https://trello.com/b/fhmW6E4Q)
 
 ### Technologies Used
-* Rails
+* Ruby on Rails
 * Bootstrap
 * Sass
-* Ruby Gems:
+* Gems:
   - Devise
   - BetterErrors
   - bootstrap-generators
