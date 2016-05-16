@@ -1,6 +1,9 @@
 # brute_force
 A simple dashboard to collect resources and track learning of
-programming languages
+programming languages.
+
+This web app was created as an intro to Ruby on Rails and
+to practice MVC design with CRUD functionality, relational database and authentication.
 
 ## Notes
 * Wireframes [1](https://drive.google.com/file/d/0B7VisA2q3bJlY0drYlY0aWEtcm8/view?usp=sharing),
@@ -19,6 +22,7 @@ programming languages
   - bootstrap-generators
   - pry-rails
   - rails_12factor
+* SQL
 * Heroku
 
 ### What's Next / Future Deployments
